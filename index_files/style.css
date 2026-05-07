@@ -76,6 +76,7 @@ body
             border-radius: 15px;
             padding: 20px;
             box-shadow: 5px 6px 0 rgba(0,0,0,0.3);
+            width:90%;
         }
         @media only screen and (max-width:576px)
         {
@@ -90,7 +91,7 @@ body
         .pannel-grid
         {
             display:grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(6,1fr);
             gap:12px;
             animation: show 0.3s ease-out;
         }
