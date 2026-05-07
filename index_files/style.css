@@ -145,4 +145,11 @@ body
             padding:50px;
         }
 
+.noiDungCopy
+{
+    height:200px;
+    width:350px;
+    border-radius:5px;
+    padding:8px;
+}
 
