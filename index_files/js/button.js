@@ -10,12 +10,13 @@ class MenuButton
         this.imageWidth = imageWidth;
     }
 
-    toElement()
+    toElement(big = false)
     {
         let aa = document.createElement('a');
         aa.href = this.link;
         let divv = document.createElement('div');
         divv.className = 'appButton';
+        if (big){divv.classList.add("bigButton");}
         if (this.imageSrc == '')
         {
 
