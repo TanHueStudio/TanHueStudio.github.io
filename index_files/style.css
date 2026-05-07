@@ -145,7 +145,7 @@ body
 
         .appButton:hover
         {
-            background-color:rgba(0,0,0,0.2);
+            background-color: #0abf58;
             color: white;
         }
         
