@@ -25,7 +25,18 @@ body
     }
 }
 
+.button
+{
+    padding:8px; border-radius:5px;
+    color: white;
+    
+}
 
+.Note_Input_Active
+{
+    background: green;
+    color:white;
+}
 
 .container
 {
