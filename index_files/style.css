@@ -30,8 +30,8 @@ body
 .container
 {
     margin-top:20px;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    display:flex;
+    flex-direction:columns;
     justify-items: center;
     gap:30px; /*khoảng cách dọc ngang các pannel */
     padding:30px;
