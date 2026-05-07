@@ -25,76 +25,25 @@
                 
                 </div>
             </div>
-    
-            <div class="pannel">
-                <div class="pannel-grid" id="pannel2">
-                
-                </div>
-            </div>
-    
-            <div class="pannel">
-                <div class="pannel-grid" id="pannel3">
-                
-                </div>
-            </div>
     </div>
 
     <script>
         let pannel1 = document.getElementById('pannel1');
-        let pannel2 = document.getElementById('pannel2');  
-        let pannel3 = document.getElementById('pannel3');
-
         var DSButton = [
-            new MenuButton(1, "1_1","https://chat.openai.com",'Chat GPT','openai.svg','15px'),
-            new MenuButton(1, "1_2","https://gemini.google.com/",'Gemini','gemini.png','15px'),
+            new MenuButton(1, "1_1","https://chat.openai.com",'Chat GPT','openai.svg','20px'),
+            new MenuButton(1, "1_2","https://gemini.google.com/",'Gemini','gemini.png','20px'),
 
-            new MenuButton(1, "1_3","https://drive.google.com/",'Drive','drive.png','25px'),
-            new MenuButton(1, "1_4","https://chat.zalo.me",'Zalo','zalo.png','25px'),
+            new MenuButton(1, "1_3","https://drive.google.com/",'Drive','drive.png','30px'),
+            new MenuButton(1, "1_4","https://chat.zalo.me",'Zalo','zalo.png','30px'),
 
-            new MenuButton(1, "1_5","https://pvctask.great-site.net/",'PVC TASK','task.svg','15px'),
-            new MenuButton(1, "1_6","https://pvcfile.github.io",'FAST FILE','file.jpg','15px'),
-
-            new MenuButton(1, "1_7","https://phamcuong8868.github.io/chinese/",'学汉语','',''),
-            new MenuButton(1, "1_8","https://danhba.great-site.net/",'DBĐT','danhba.svg','50px'),
-
-            new MenuButton(1, "1_9","https://docs.google.com/forms/d/e/1FAIpQLScBhvPfij33CfC3Jl5eAw0c1kv5KybK_-Eg78h47UdwAKCKFQ/viewform",'Phiếu chi mới','money.jpg','25px'),
-            new MenuButton(1, "1_10","https://docs.google.com/spreadsheets/d/17YTTLV6hJekGBqV-vDZtkk7AlmWelMGzbaVjN96TQcM/edit?usp=drive_link",'Tổng hợp chi','sheet.jpg','15px'),
-
-
-            new MenuButton(2, "2_1","https://canva.com",'Canva','canva.png','15px'),
-            new MenuButton(2, "2_2","https://www.figma.com/",'Figma','figma.png','15px'),
-
-            new MenuButton(2, "2_3","https://www.appsheet.com/",'Appsheet','appSheet.png','15px'),
-            new MenuButton(2, "2_4","https://github.com/",'Github','github.svg','15px'),
-
-            new MenuButton(2, "2_5","https://www.pinterest.com/",'Pinterest','printerest.png','15px'),
-            new MenuButton(2, "2_6","https://www.infinityfree.com/",'Infinity','infinity.svg','25px'),
-            new MenuButton(2, "2_7","https://pvctech.github.io/",'pvctech.github.io','github.svg','15px'),
-
-            new MenuButton(3, "3_1","https://pkpgroup.github.io/music-player-html/",'CD PKPPhương','cd.png','15px'),
-            new MenuButton(3, "3_2","https://pkp-deptrai.github.io/PKPweb/thoi-khoa-bieu.htm",'Thời khoá biểu','','15px'),
-
-            new MenuButton(3, "3_3","http://baohiem.pvcgo.net", "Sổ ghi bảo hiểm", "sobaohiem.ico", "15px"),                    
-            new MenuButton(3, "3_4","https://mailinhnamdinh.github.io/Ecard-maker/", "CARD VISIT", "card.jpg", "15px")  ,
-
-            new MenuButton(3, "3_5","https://mailinhnamdinh.github.io/",'Mai Linh App','mailinh.png','18px'),
-            new MenuButton(3, "3_6","https://studio.youtube.com/channel/UCEB37HtAt5wB7QWEyqxr6SA/music?hl=vi-VN", "Free YT music", "", ""),
-
-            new MenuButton(3, "3_7","https://tnu.aum.edu.vn/login/index.php",'TNU AUM','tnu.png','15px'),
-            new MenuButton(3, "3_8","https://tnu.great-site.net/",'TNU PVC','tnu.png','15px')
-        
+            new MenuButton(1, "1_5","https://studio.youtube.com/channel/UCEB37HtAt5wB7QWEyqxr6SA/music?hl=vi-VN", "Free YT music", "", ""),        
         ];
         
         
         
         for (let i=0; i < DSButton.length; i++)
-        {    
-            if (DSButton[i].pannelStt == 1)
-                pannel1.appendChild(DSButton[i].toElement());
-            else if (DSButton[i].pannelStt == 2)
-                pannel2.appendChild(DSButton[i].toElement());
-            else if (DSButton[i].pannelStt == 3)
-                pannel3.appendChild(DSButton[i].toElement());
+        {
+             pannel1.appendChild(DSButton[i].toElement());
         }
 
         renderFavoriteButtons();
