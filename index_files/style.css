@@ -28,7 +28,9 @@ body
 .button
 {
     display:grid;
-    justify-item:center;
+    place-items:center;
+    justify-items:center;
+    aign-items: center;
     padding:12px; 
     border-radius:5px;
     color: #0abf58;
