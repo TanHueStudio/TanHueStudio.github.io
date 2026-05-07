@@ -50,7 +50,7 @@ class MenuButton
         let countMap = JSON.parse(localStorage.getItem(countKey))  || {};
         countMap[this.id] = (countMap[this.id] || 0) + 1;
         localStorage.setItem(countKey, JSON.stringify(countMap));
-        renderFavoriteButtons();
+        //renderFavoriteButtons();
     }
 }
 
