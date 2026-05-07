@@ -29,8 +29,16 @@ body
 {
     padding:8px; border-radius:5px;
     color: white;
-    
+    border:0.5px solid white;
+    border-radius:5px;
+    text-align:center;
 }
+.button:hover
+{
+    background:white;
+    color:black;
+}
+
 
 .Note_Input_Active
 {
