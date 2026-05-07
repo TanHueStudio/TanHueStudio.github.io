@@ -42,7 +42,8 @@ body
 {
     margin-top:20px;
     display:flex;
-    flex-direction:columns;
+    flex-direction:row;
+    flex-wrap:wrap;
     justify-items: center;
     gap:30px; /*khoảng cách dọc ngang các pannel */
     padding:30px;
