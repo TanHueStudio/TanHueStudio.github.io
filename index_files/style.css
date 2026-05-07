@@ -1,0 +1,131 @@
+/*reset*/
+.{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-size:14px;
+}
+a 
+{
+    text-decoration:none;
+}
+
+/*reset end*/
+
+body
+{
+    background-image: linear-gradient(to bottom, #fff, #0abf58);
+    min-height:100vh;
+}
+@media only screen and (max-width:576px)
+{
+    body
+    {
+        background-image: linear-gradient(to bottom,rgb(161, 218, 161), #0abf58);
+    }
+}
+
+
+
+.container
+{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    justify-items: center;
+    gap:30px; /*khoảng cách dọc ngang các pannel */
+    padding:30px;
+}
+@media only screen and (max-width:576px)
+{
+    .container 
+    {
+        margin-top:0px;
+        gap:0px;
+        padding:0px;
+        justify-items: center;
+    }
+}
+
+.favorite-menu
+{
+    margin-top:80px;
+    width:90%;
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    gap:20px;
+    font-size: 18px;
+}
+
+@media only screen and (max-width:576px)
+{
+    .favorite-menu
+    {
+        width:100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap:10px;
+    }
+}
+
+        .pannel
+        {
+            background:white;
+            border:1px solid rgba(0,0,0,0.2);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 5px 6px 0 rgba(0,0,0,0.3);
+        }
+        @media only screen and (max-width:576px)
+        {
+            .pannel
+            {
+                margin-top:40px;
+                width:80%;
+                box-shadow: 0 0 0 white;
+            }
+        }
+
+        .pannel-grid
+        {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:12px;
+            animation: show 0.3s ease-out;
+        }
+
+        @media only screen and (max-width:576px)
+        {
+            .pannel-grid
+            {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .appButton
+        {
+            background-color: #fff;
+            color:rgba(0,0,0,1);
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.2);                    
+            padding: 15px;
+            text-align: left;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .appButton:hover
+        {
+            background-color:rgba(0,0,0,0.2);
+            color: white;
+        }
+        
+        .appButton img
+        {
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+
+
