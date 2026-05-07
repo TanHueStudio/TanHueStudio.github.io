@@ -25,6 +25,19 @@
                 
                 </div>
             </div>
+        <textarea class="noiDungCopy">Hãy tạo ảnh thẻ từ ảnh gốc này. Yêu cầu quan trọng nhất: Giữ nguyên cấu trúc khuôn mặt (facial structure), đường nét xương hàm và tỷ lệ các ngũ quan (mắt, mũi, miệng) 100% từ ảnh gốc. KHÔNG làm thon gọn hay làm đầy khuôn mặt. Chỉ thực hiện các thay đổi sau:
+1. Thay trang phục thành: áo sơ mi trắng có cổ chỉnh tề.
+
+2. Thay nền thành: màu xanh chuẩn ảnh thẻ (#66d9ff)
+
+3. Xử lý da nhẹ nhàng (giảm mụn, làm sáng da tự nhiên) nhưng phải giữ đúng khối mặt ban đầu.
+
+4. nếu nữ thì àm môi hồng đỏ tươi, nếu nam thì không làm
+
+5. Kích thước ảnh 3,7 x 5,5 cm
+
+6. Độ phân giải 300px/inch</textarea>
+        <div class="button">Copy</div>
     </div>
 
     <script>
@@ -51,7 +64,29 @@
 
 
 
-
+<script>
+    function copyToClipboard(NoiDung)
+	{
+		var $temp = $("<textarea>");
+        var brRegex = /<br\s*[\/]?>/gi;
+        $("body").append($temp);
+        $temp.val(NoiDung.replace(brRegex, "\r\n")).select();
+        document.execCommand("copy");
+        $temp.remove();
+        
+        $('.Note_Input').addClass('Note_Input_Active');
+        setTimeout(function(){$('.Note_Input').removeClass('Note_Input_Active');},100);
+	}
+	
+	$(document).ready(function () {
+        $("#Note_Input").focusout(function(){
+            copyToClipboard($('#Note_Input').val());
+            LuuNote();
+        });
+    });
+	
+	
+</script>
 
 
 
