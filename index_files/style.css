@@ -33,7 +33,7 @@ body
     aign-items: center;
     padding:12px; 
     border-radius:5px;
-    color: #0abf58;
+    color: rgba(0,0,0,0.75);
     background: white;
     border:0.5px solid white;
     border-radius:5px;
