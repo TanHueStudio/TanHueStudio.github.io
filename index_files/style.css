@@ -27,6 +27,8 @@ body
 
 .button
 {
+    display:grid;
+    justify-item:center;
     padding:12px; 
     border-radius:5px;
     color: #0abf58;
