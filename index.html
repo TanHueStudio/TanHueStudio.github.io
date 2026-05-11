@@ -37,9 +37,38 @@
 5. Kích thước ảnh 3,7 x 5,5 cm
 
 6. Độ phân giải 300px/inch</textarea>
-        <div class="button" onclick="copyToClipboard()">COPY</div>
+        <div class="button" onclick="copyToClipboard('noiDungCopy')">COPY</div>
     </div>
 
+
+	<h4>Phục chế:</h4>
+	<textarea class="noiDungCopy" id="noiDungCopyPhucChe">Hãy thực hiện phục chế kỹ thuật cho bức ảnh này với yêu cầu cốt lõi: GIỮ NGUYÊN BẢN GỐC TỚI TỪNG ĐIỂM ẢNH (Zero deviation from original features). Không thay đổi, vẽ lại, hay làm mới khuôn mặt dựa trên trí tưởng tượng.
+
+Danh sách các yêu cầu cụ thể:
+
+1. Giữ Nguyên Ngũ Quan (Facial Feature Preservation - 100%):
+
+Không vẽ lại nụ cười. Giữ nguyên hình dáng miệng và nụ cười mím chi (mclosed-mouth smile) đúng như độ cong và đường nét pixel trong ảnh gốc.
+
+Không thay đổi hướng nhìn. Giữ nguyên vị trí chính xác của lòng đen mắt (pupils) đang nhìn nghiêng. Ánh mắt phải có cùng vị trí pixel như ảnh gốc.
+
+Không thay đổi hình dáng mũi, tai, hay cấu trúc xương hàm. Không làm thon gọn khuôn mặt.
+
+2. Xử Lý Phục Chế Kỹ Thuật (Technically Restore, Do Not Re-draw):
+
+Sử dụng kỹ thuật "Inpainting" (vẽ bù) và "Denoising" (khử nhiễu) chỉ để tẩy sạch các vết ố, mốc trắng, và vết rách. Lấp đầy các vùng hỏng bằng chất liệu da và tóc thực tế được lấy từ các vùng lân cận.
+
+Sử dụng kỹ thuật "Deep Restoration" (phục chế sâu) để làm sạch da và các chi tiết áo, nhưng không được làm mịn da quá đà (smoothing) đến mức mất đi texture tự nhiên của ảnh gốc. Giữ lại độ sâu (depth) và độ nhiễu hạt nhẹ (grain) của ảnh cũ.
+
+3. Giữ Nguyên Màu Sắc và Bối Cảnh (Color and Frame Preservation):
+
+Giữ nguyên hệ màu Sepia (nâu vàng/vàng úa) đặc trưng của ảnh cũ. Không chuyển sang màu trắng đen hoặc tô màu mới.
+
+Giữ lại khung viền giấy ảnh cũ, bao gồm cả các cạnh bị mòn. Chỉ làm sạch, không thay khung.
+
+Câu chốt hạ: "Coi bức ảnh gốc là một khuôn mẫu cố định, tuyệt đối không được phép chỉnh sửa đường nét nhân vật dù chỉ 1%. Kết quả phải là bức ảnh sạch, rõ ràng hơn của chính người đó ở thời điểm đó, với nụ cười và ánh mắt giống hệt."</textarea>
+        <div class="button" onclick="copyToClipboard('noiDungCopyPhucChe')">COPY</div>
+    </div>
     <script>
         let pannel1 = document.getElementById('pannel1');
         var DSButton = [
@@ -62,9 +91,9 @@
 
         //renderFavoriteButtons();
 
-		function copyToClipboard() 
+		function copyToClipboard(noiDungId) 
 		{
-			const input = document.getElementById("noiDungCopy");
+			const input = document.getElementById(noiDungId);
 			let noiDung = input.value;
 		    const brRegex = /<br\s*[\/]?>/gi;
 		
