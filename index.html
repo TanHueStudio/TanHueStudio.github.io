@@ -25,6 +25,7 @@
                 
                 </div>
             </div>
+		
         <textarea class="noiDungCopy" id="noiDungCopy">Hãy tạo ảnh thẻ từ ảnh gốc này. Yêu cầu quan trọng nhất: Giữ nguyên cấu trúc khuôn mặt (facial structure), đường nét xương hàm và tỷ lệ các ngũ quan (mắt, mũi, miệng) 100% từ ảnh gốc. KHÔNG làm thon gọn hay làm đầy khuôn mặt. Chỉ thực hiện các thay đổi sau:
 1. Thay trang phục thành: áo sơ mi trắng có cổ chỉnh tề.
 
@@ -38,10 +39,10 @@
 
 6. Độ phân giải 300px/inch</textarea>
         <div class="button" onclick="copyToClipboard('noiDungCopy')">COPY</div>
-    </div>
 
 
-	<h4 style="color:white;">Phục chế:</h4>
+
+		<h4 style="color:white;">Phục chế:</h4><br>
 	<textarea class="noiDungCopy" id="noiDungCopyPhucChe">Hãy thực hiện phục chế kỹ thuật cho bức ảnh này với yêu cầu cốt lõi: GIỮ NGUYÊN BẢN GỐC TỚI TỪNG ĐIỂM ẢNH (Zero deviation from original features). Không thay đổi, vẽ lại, hay làm mới khuôn mặt dựa trên trí tưởng tượng.
 
 Danh sách các yêu cầu cụ thể:
@@ -69,6 +70,9 @@ Giữ lại khung viền giấy ảnh cũ, bao gồm cả các cạnh bị mòn.
 Câu chốt hạ: "Coi bức ảnh gốc là một khuôn mẫu cố định, tuyệt đối không được phép chỉnh sửa đường nét nhân vật dù chỉ 1%. Kết quả phải là bức ảnh sạch, rõ ràng hơn của chính người đó ở thời điểm đó, với nụ cười và ánh mắt giống hệt."</textarea>
         <div class="button" onclick="copyToClipboard('noiDungCopyPhucChe')">COPY</div>
     </div>
+
+
+	
     <script>
         let pannel1 = document.getElementById('pannel1');
         var DSButton = [
