@@ -196,8 +196,8 @@ body
 
         .appButton:hover
         {
-            background-color: orange;
-            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 3px 5px rgba(255,255,255,0.3);
         }
         
         .appButton img
