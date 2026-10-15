@@ -1,10 +1,10 @@
-/*reset*/
-.{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-size:14px;
+:root
+{
+    --color-primary: #0abf58;
+    --color-primary-light: #4ec280;
+    --color-on-primary: white;
 }
+
 a 
 {
     text-decoration:none;
@@ -14,9 +14,10 @@ a
 
 body
 {
-    background-image: linear-gradient(to bottom, #fff, #0abf58);
+    background-image: linear-gradient(to bottom, #fff, #4ec280);
     min-height:100vh;
 }
+
 @media only screen and (max-width:576px)
 {
     body
@@ -25,29 +26,73 @@ body
     }
 }
 
+
+.card
+{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    background-color: white;
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.2);
+
+    min-width: 240px;
+    min-height: 240px;
+}
+
+.card__caption
+{
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border-radius: 4px 4px 0px 0px;
+    padding: 4px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.card__option
+{
+    display: grid;
+    grid-template-rows: auto 36px;
+    gap: 6px;
+    padding-left: 6px;
+}
+
 .button
 {
     display:grid;
     place-items:center;
     justify-items:center;
-    aign-items: center;
-    padding:12px; 
-    border-radius:5px;
-    color: rgba(0,0,0,0.75);
-    background: white;
+    align-items: center;
+    padding:8px 16px; 
+
+    color: var(--color-on-primary);
+    background: var(--color-primary);
+
     border:0.5px solid white;
     border-radius:5px;
+
     text-align:center;
-    height:30px;
-    width:100px;
     user-select: none;
+    width: 80px;
 }
 
 .button:hover
 {
     background: none;
+    color: var(--color-primary);
+    font-weight:bold;
+    border: 1px solid var(--color-primary);
+}
+
+.button:active
+{
+    background: orange;
     color: white;
     font-weight:bold;
+    border: 1px solid var(--color-primary);
 }
 
 
@@ -64,6 +109,7 @@ body
     flex-direction:row;
     flex-wrap:wrap;
     justify-items: center;
+    align-items: center;
     gap:30px; /*khoảng cách dọc ngang các pannel */
     padding:30px;
 }
@@ -80,7 +126,8 @@ body
 
 .favorite-menu
 {
-    margin-top:80px;
+    margin-top:20px;
+    /*margin-top:80px;*/
     width:90%;
     display:grid;
     grid-template-columns: repeat(6,1fr);
@@ -104,11 +151,7 @@ body
         {
             padding: 20px;
             width:90%;
-
-            background: rgba(255,255,255,0.12);    
-            /* blur phần phía sau */
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);        
+            background: #0abf58;      
             border: 1px solid rgba(255,255,255,0.18);        
             border-radius: 20px;        
             box-shadow: 0 8px 32px rgba(0,0,0,0.18), inset 0 1px 1px rgba(255,255,255,0.2);
@@ -176,3 +219,13 @@ body
     padding:8px;
 }
 
+.hidden
+{
+    display: none !important;
+}
+
+.input
+{
+    border-radius: 8px;
+    padding: 8px;
+}
