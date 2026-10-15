@@ -50,6 +50,7 @@ body
     padding: 4px;
     font-weight: 700;
     text-align: center;
+    opacity: 0.72;
 }
 
 .card__option
