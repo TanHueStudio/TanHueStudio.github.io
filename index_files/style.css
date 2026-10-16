@@ -41,6 +41,8 @@ body
     min-width: 240px;
     min-height: 240px;
     box-shadow: 0 0 2px 3px rgba(255, 255, 255, 0.4);
+
+    margin-bottom: 12px;
 }
 
 .card__caption
